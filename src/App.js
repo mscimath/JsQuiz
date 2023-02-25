@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import {questions} from './data/questions';
+import {js, py, light} from './data/questions';
 import JsQuiz from './components/JsQuiz';
 
 
@@ -15,9 +15,14 @@ export default function App() {
             <div className='circle'><br></br>width is {windowWidth}</div>
             <div className="circle-one">height is{height}</div>
             <div className="circle-two"></div>
-            <Link to="/js">js</Link>
+            
+                <Link className={"link"} to="/js" >js quiz</Link>            
+                <Link className={"link"} to="/py">py quiz</Link>
+                <Link className={"link"} to="/light">light quiz</Link>
             <Routes>
-                <Route path='/js' element={<JsQuiz questions={questions} />}>js quiz</Route>
+                <Route path='/js' element={<JsQuiz questions={js} />}></Route>
+                <Route path='/py' element={<JsQuiz questions={py} />}></Route>
+                <Route path='/light' element={<JsQuiz questions={light} />}></Route>
             </Routes>
         </Router>
 	);

@@ -1,10 +1,10 @@
-import './../App.css'
+import './../App.css';
 import React, { useState} from 'react';
 
 function JsQuiz({questions}){
 
     const shuffledQuestions = questions.sort((a, b) => 0.5 - Math.random());
-    const quizQuestions = shuffledQuestions.slice(0, 2);
+    const quizQuestions = shuffledQuestions.slice(0, 5);
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
