@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: rgb(43, 70, 71);
+  text-align: center;
+}
+
+main {
+  font-family: "Segoe", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Background- Canvas*/
+#piaskownica {
+  /*Sometimes breaks on changing window width*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left bottom, #cacaca, #dfdfdd);
+}
+
+/*Background- Three Circles*/
+.circle,
+.circle-one,
+.circle-two {
+  background: #fff;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle {
+  top: 5%;
+  left: 10%;
+  animation: up 4s linear forwards;
+}
+
+@keyframes up {
+  0% {
+    top: 100%;
+  }
+  10% {
+    top: 50%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+
+.circle-one {
+  top: 9%;
+  right: 10%;
+}
+
+.circle-two {
+  bottom: 1%;
+  left: 1%;
+}
+
+/*Piece of Glass*/
+.glass {
+  display: flex;
+  background: #fff;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(1.7rem);
+  border-radius: 2rem;
+  z-index: 3;
+}
+
+/*Images*/
+
+.image {
+  height: 7vw;
+  width: 7vw;
+  border: 0px inset;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.link,
+.card {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.link {
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.link h2,
+.status {
+  padding: 1rem 2rem;
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*Left side of the Glass*/
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.2)
+  );
+  border-radius: 2rem;
+}
+
+.pro {
+  background: linear-gradient(to left bottom, #cacaca, #fafc81);
+  border-radius: 2rem;
+  color: white;
+  padding: 2rem;
+  font-weight: 600;
+}
+
+/*Right side of the Glass */
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/*GAMES*/
+
+.games {
+  margin: 2rem;
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.status input {
+  background: linear-gradient(
+    to left bottom,
+    rgba(202, 202, 202, 0.7),
+    rgba(250, 252, 129, 0.3)
+  );
+  border: none;
+  width: 50%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.status > input:focus {
+  border: 1px solid white;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.473);
+  border-radius: 2rem;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+}
+
+.percentage {
+  background: linear-gradient(
+    to left top,
+    rgba(134, 134, 134, 0.986),
+    rgba(250, 252, 129, 0.932)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.7rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+  .glass {
+    flex-direction: column;
+  }
+  .games {
+    flex: 1;
+  }
+
+  .h1 {
+    font-size: 1rem;
+  }
+}
