@@ -31,6 +31,63 @@
 .App-link {
   color: #61dafb;
 }
+/*Home Page*/
+/*Background- Canvas*/
+#background-canvas {
+  /*Sometimes breaks on changing window width*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background: linear-gradient(to left bottom, #cacaca, #dfdfdd);
+}
+
+/*Background- Three Circles*/
+.circle,
+.circle-one,
+.circle-two {
+  background: #fff;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle {
+  top: 5%;
+  left: 10%;
+  animation: up 4s linear forwards;
+}
+
+@keyframes up {
+  0% {
+    top: 100%;
+  }
+  10% {
+    top: 50%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+
+.circle-one {
+  top: 9%;
+  right: 10%;
+}
+
+.circle-two {
+  bottom: 1%;
+  left: 1%;
+}
+
+
+/*React Logo*/
 
 @keyframes App-logo-spin {
   from {
