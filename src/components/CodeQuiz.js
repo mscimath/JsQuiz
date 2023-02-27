@@ -4,6 +4,7 @@ import React, { useState} from 'react';
 function JsQuiz({questions}){
 
     const shuffledQuestions = questions.sort((a, b) => 0.5 - Math.random());
+    {/*remove repetitions from shuffledQuestions*/}
     const quizQuestions = shuffledQuestions.slice(0, 5);
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -42,7 +43,9 @@ function JsQuiz({questions}){
 							<span>Question {currentQuestion + 1}</span>/{quizQuestions.length}
 						</div>
 						<div className='question-text'>
-                            { quizQuestions[currentQuestion].question }
+                            { quizQuestions[currentQuestion].questionLines.map((line, index) =>
+                               <p className='question-line'> {line.line} </p>
+                            ) };
                         </div>
 					</div>
                     
