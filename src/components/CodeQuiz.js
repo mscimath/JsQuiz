@@ -43,9 +43,19 @@ function JsQuiz({questions}){
 							<span>Question {currentQuestion + 1}</span>/{quizQuestions.length}
 						</div>
 						<div className='question-text'>
+                            <p>{ quizQuestions[currentQuestion].questionText }</p>
+                            <pre>
                             { quizQuestions[currentQuestion].questionLines.map((line, index) =>
                                <p className='question-line'> {line.line} </p>
-                            ) };
+                            ) }
+                            </pre>
+                            {quizQuestions[currentQuestion].questionTextBottom ? (
+                                <p>{ quizQuestions[currentQuestion].questionTextBottom }</p>
+                            ) : (
+                                <></>
+                            )
+
+                            }
                         </div>
 					</div>
                     
