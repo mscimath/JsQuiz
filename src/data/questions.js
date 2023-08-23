@@ -1,7 +1,6 @@
-const js_theory =  [
-            {
-                question: "What does SCSS stand for?",
-                answers: [
+const js_and_react =  [
+             {question: "What does SCSS stand for?",             
+             answers: [
                     { text: "Smart Cascading Style Sheets", correctness: false},
                     { text: "Sassy Colorful Smart Sheets", correctness: false},
                     { text: "Sassy Cascading Style Sheets", correctness: true},
@@ -10,31 +9,23 @@ const js_theory =  [
                 key: 1,
             },
             {
-                question: "What will the following code produce: var a = 7*4; var b = a % 7; var c = a - b; document.writeln(c -= 6) ?",
+                question: "",
                 answers: [
-                    { text: 18, correctness: false},
-                    { text: "Nothing", correctness: false},
-                    { text: "Error", correctness: false},
-                    { text: "22", correctness: true},
-                ],
-                key: 2,
+                    {text: ""},
+                ]
             },
             {
-                question: "What will this code produce: var str = 'JavaScript is great!'; document.write('<br>' + ((str.length - 10)*5 + 10) + '<br>'); ?",
+                question: "",
                 answers: [
-                    { text: "60", correctness: false},
-                    { text: "60 surrounded by newlines.", correctness: false},
-                    { text: "'60' surrounded by newlines.", correctness: true},
-                    { text: "<br> 60 <br>", correctness: false},
-                ],
-                key: 3,
+                    {text: ""}
+                ]
             },
             {
                 question: "What is React.StrictMode?",
                 answers: [
                     { text: "Does not allow for the use of double equal sign (==).", correctness: false},
                     { text: "Highlights potential defects of the application after activating additional checks.", correctness: true},
-                    { text: "It renders a Strict Component.", correctness: false},
+                    { text: "Renders a Strict Component.", correctness: false},
                 ],
                 key: 4,
             },
@@ -50,7 +41,9 @@ const js_theory =  [
                 key: 5,
             },
             {
-                question: "What is useReducer hook used for in React?",
+                questionLines: [
+                    {line:"What is useReducer hook used for in React?"}
+                ],
                 answers: [
                     { text: "Smart Cascading Style Sheets", correctness: false},
                     { text: "Sassy Colorful Smart Sheets", correctness: false},
@@ -61,7 +54,9 @@ const js_theory =  [
 
             },
             {
-                question: "What are 'reference values' in JavaScript?",
+                questionLines:[
+                    {line: "What are 'reference values' in JavaScript?"}
+                ],
                 answers: [
                     { text: "Smart Cascading Style Sheets", correctness: false},
                     { text: "Sassy Colorful Smart Sheets", correctness: false},
@@ -121,7 +116,7 @@ const js = [
                     {line: "        maximum = tab[i]"},
                     {line: "print(maximum)"},
                     {line: "For what data will the printed answer not be correct?"},
-        ],
+                    ],
             answers : [ {text: "tab =  [14, 0, 5, 6, -2]", correctness: false},
                               {text: "tab = [0, -3, -2, 0, -5]", correctness: false},
                               {text: "tab = [7, -1, 9, -23, 1]", correctness: false},
@@ -131,7 +126,28 @@ const js = [
                             key: 4,
                     solution: "The error is an invalid initial value for the maximum variable. If all numbers are less than 0, this variable will remain 0. An example fix could be to make the starting value smaller or even set it to the first element of the tab array.",
           },
-        
+          {
+            questionLines: [
+                {line: "What will this code produce: var str = 'JavaScript is great!'; document.write('<br>' + ((str.length - 10)*5 + 10) + '<br>'); ?" }
+            ], 
+            answers: [
+                { text: "60", correctness: false},
+                { text: "60 surrounded by newlines.", correctness: false},
+                { text: "'60' surrounded by newlines.", correctness: true},
+                { text: "<br> 60 <br>", correctness: false},
+            ],
+            key: 5,
+        },
+        {
+            question: "What will the following code produce: var a = 7*4; var b = a % 7; var c = a - b; document.writeln(c -= 6) ?",
+                answers: [
+                    { text: 18, correctness: false},
+                    { text: "Nothing", correctness: false},
+                    { text: "Error", correctness: false},
+                    { text: "22", correctness: true},
+                ],
+                key: 6,
+        }
 ]
 
 const py = [
@@ -687,4 +703,4 @@ const light_easy = [
     },
 ]
 
-export {js_theory, py_theory, py, js, light, light_easy}
+export {js_and_react, py_theory, py, js, light, light_easy}
