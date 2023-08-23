@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Header } from './components/Header';
 import './App.css';
-import {js_and_react, js, py_theory, py, light, light_easy} from './data/questions';
+import {js_and_react, js, py_theory, py, light, light_easy, dual_nature_of_light, elements_of_special_relativity, nuclear_physics} from './data/questions';
 import CodeQuiz from './components/CodeQuiz';
 import TheoryQuiz from './components/TheoryQuiz';
 
@@ -20,14 +20,12 @@ export default function App() {
             if(ref) {
                 const width = ref.offsetWidth;
                 ref.style.height = `${width}px`;
-                /*alert('width :' + {width} + ', height:' )*/
-                ref.style.backgroundColor = 'yellow';
             }
         });
     }, []);
 
-    const arr = [1, 2, 3, 4, 5, 6]; /*1*/
-    const directs = ["light", "js", "light_easy", "js_and_react", "py_theory", "py"] /*3*/
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]; /*1*/
+    const directs = ["light", "dual_nature_of_light", "elements_of_special_relativity", "nuclear_physics", "js", "light_easy", "js_and_react", "py_theory", "py"] /*3*/
     const refs = useRef([]); /*2*/
 
 	return (
@@ -69,6 +67,9 @@ export default function App() {
                 <Route path='/light_easy' element={<TheoryQuiz questions={light_easy} />}></Route>
                 <Route path='/py_code' element={<CodeQuiz questions={py} />}></Route>
                 <Route path='/js' element={<CodeQuiz questions={js}/>} ></Route>
+                <Route path='/dual_nature_of_light' element={<TheoryQuiz questions={dual_nature_of_light} />} ></Route>
+                <Route path='/elements_of_special_relativity' element = { <TheoryQuiz questions= {elements_of_special_relativity}/> }></Route>
+                <Route path='/nuclear_physics' element = { <TheoryQuiz questions = {nuclear_physics} /> } ></Route>
             </Routes>
             </div>
         </Router>

@@ -1,3 +1,12 @@
+const data_science = [
+    {
+        question: "",
+        answers: [
+            {text: ""},
+        ]
+    },
+]
+
 const js_and_react =  [
              {question: "What does SCSS stand for?",             
              answers: [
@@ -12,13 +21,15 @@ const js_and_react =  [
                 question: "",
                 answers: [
                     {text: ""},
-                ]
+                ],
+                key: 2,
             },
             {
                 question: "",
                 answers: [
                     {text: ""}
-                ]
+                ],
+                key: 3,
             },
             {
                 question: "What is React.StrictMode?",
@@ -41,9 +52,7 @@ const js_and_react =  [
                 key: 5,
             },
             {
-                questionLines: [
-                    {line:"What is useReducer hook used for in React?"}
-                ],
+                question: "What is useReducer hook used for in React?",                
                 answers: [
                     { text: "Smart Cascading Style Sheets", correctness: false},
                     { text: "Sassy Colorful Smart Sheets", correctness: false},
@@ -54,9 +63,7 @@ const js_and_react =  [
 
             },
             {
-                questionLines:[
-                    {line: "What are 'reference values' in JavaScript?"}
-                ],
+                question: "What are 'reference values' in JavaScript?",
                 answers: [
                     { text: "Smart Cascading Style Sheets", correctness: false},
                     { text: "Sassy Colorful Smart Sheets", correctness: false},
@@ -703,4 +710,30 @@ const light_easy = [
     },
 ]
 
-export {js_and_react, py_theory, py, js, light, light_easy}
+const dual_nature_of_light =[
+    {
+        question: "",
+        answers: [
+            {text: ""},
+        ]
+    },
+]
+
+const elements_of_special_relativity = [
+    {
+        question: "",
+        answers: [
+            {text: ""},
+        ]
+    },
+]
+
+const nuclear_physics = [
+    {
+        question: "",
+        answers: [
+            {text: ""},
+        ]
+    },
+]
+export {js_and_react, py_theory, py, js, light, light_easy, dual_nature_of_light, elements_of_special_relativity, nuclear_physics }
